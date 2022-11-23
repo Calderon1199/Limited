@@ -2,11 +2,11 @@ import { Outlet, Link} from "react-router-dom";
 import { Fragment, useContext } from "react";
 import CartIcon from '../../components/cart-icon/cart-icon';
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown";
-import './navigation.scss'
 import { ReactComponent as LimitLogo} from "../../assets/crown.svg";
 import { UserContext } from "../../contexts/user.context";
 import { CartContext } from "../../contexts/cart";
 import { signOutUser } from "../../utilities/Firebase/Firebase";
+import './navigation.scss'
 
 const Navigation = () => {
     const { currentUser } = useContext(UserContext);
@@ -34,7 +34,7 @@ const Navigation = () => {
                             Sign In
                         </Link>
                     )}
-                    <CartIcon/>
+                    <CartIcon />
                 </div>
                 {isCartOpen && <CartDropdown/>}
             </div>
